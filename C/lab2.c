@@ -1,19 +1,12 @@
-#include<stdio.h>
+#include <stdio.h>
 void main()
 {
-    float price[5];
-    printf("Enter the price of 1 items: ");
-    scanf("%f",&price[0]);
-    printf("Enter the price of 2 items: ");
-    scanf("%f",&price[1]);
-    printf("Enter the price of 3 items: ");
-    scanf("%f",&price[2]);
-    printf("Enter the price of 4 items: ");
-    scanf("%f",&price[3]);
-    
-    
-    
-    printf("Total price of 1= %f \n",price[0]+0.18*price[0]);
-    printf("Total price of 2= %f \n",price[1]+0.18*price[1]);
-    printf("Total price of 3= %f \n",price[2]+0.18*price[2]);
+    int n;
+    printf("enter n:");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= 10; i++)
+    {
+        printf("%d x %d = %d \n", n,i,n*i);
+    }
 }
