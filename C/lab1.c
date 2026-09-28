@@ -1,13 +1,27 @@
 #include <stdio.h>
-void main()
+
+int main()
 {
-    int n;
-    printf("enter the value of n : ");
-    scanf("%d",&n);
-    
-    for (int i = 0; i <= n; i++)
+    int a[5], b[5];
+    int i;
+
+    printf("Enter 5 elements:\n");
+
+    for (i = 0; i < 5; i++)
     {
-        printf("%d \n",i);
+        scanf("%d", &a[i]);
     }
-    
+
+    // Copy elements
+    for (i = 0; i < 5; i++)
+    {
+        b[i] = a[i];
+    }
+
+    printf("Elements of second array:\n");
+
+    for (i = 0; i < 5; i++)
+    {
+        printf("%d ", b[i]);
+    }
 }

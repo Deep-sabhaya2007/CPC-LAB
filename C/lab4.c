@@ -1,12 +1,32 @@
-#include<stdio.h>
-void main()
+#include <stdio.h>
+
+int main()
 {
-    int x,fact=1;
-    printf("enter x :");
-    scanf("%d",&x);
-    for (int i = 1; i <= x; i++)
+    int a[5], i, n, found = 0;
+
+    printf("Enter 5 elements:\n");
+
+    for (i = 0; i < 5; i++)
     {
-        fact=fact*i;
+        scanf("%d", &a[i]);
     }
-    printf("%d",fact);
+
+    printf("Enter element to search: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < 5; i++)
+    {
+        if (a[i] == n)
+        {
+            found = 1;
+            break;
+        }
+    }
+
+    if (found == 1)
+        printf("Element found at position %d", i + 1);
+    else
+        printf("Element not found");
+
+ 
 }

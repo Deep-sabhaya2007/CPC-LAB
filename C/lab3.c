@@ -1,15 +1,21 @@
 #include <stdio.h>
-void main()
-{
-    int x, y, result=1;
-    printf("enter x: ");
-    scanf("%d", &x);
-    printf("enter y: ");
-    scanf("%d", &y);
 
-    for (int i = 1; i <= y; i++)
+int main()
+{
+    int a[5], i, count = 0;
+
+    printf("Enter 5 elements:\n");
+
+    for (i = 0; i < 5; i++)
     {
-        result = result * x;
+        scanf("%d", &a[i]);
+
+        if (a[i] % 3 == 0)
+        {
+            count++;
+        }
     }
-    printf("%d^%d = %d", x, y, result);
+
+    printf("Total elements divisible by 3 = %d", count);
+
 }

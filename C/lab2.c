@@ -1,12 +1,21 @@
 #include <stdio.h>
-void main()
-{
-    int n;
-    printf("enter n:");
-    scanf("%d", &n);
 
-    for (int i = 1; i <= 10; i++)
+int main()
+{
+    int a[5], i, count = 0;
+
+    printf("Enter 5 elements:\n");
+
+    for (i = 0; i < 5; i++)
     {
-        printf("%d x %d = %d \n", n,i,n*i);
+        scanf("%d", &a[i]);
+
+        if (a[i] < 0)
+        {
+            count++;
+        }
     }
+
+    printf("Total negative elements = %d", count);
+
 }
