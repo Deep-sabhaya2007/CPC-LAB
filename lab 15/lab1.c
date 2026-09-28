@@ -12,7 +12,7 @@ int main()
         scanf("%d", &a[i]);
     }
 
-    // Copy elements
+    
     for (i = 0; i < 5; i++)
     {
         b[i] = a[i];
