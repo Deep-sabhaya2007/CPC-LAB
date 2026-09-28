@@ -14,7 +14,7 @@ void main()
     {
         for (int j = 0; j < c; j++)
         {
-            scanf("%d %d",a[i][j]);
+            scanf("%d",&a[i][j]);
         }
         
     }
@@ -22,8 +22,9 @@ void main()
     {
         for (int j = 0; j < c; j++)
         {
-            printf("%d %d",a[i][j]);
+            printf("%d ",a[i][j]);
         }
+        printf("\n");
         
     }
     
