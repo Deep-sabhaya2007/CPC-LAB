@@ -1,19 +1,14 @@
 #include <stdio.h>
-void main()
+int main()
 {
 
-    int i = 1, n;
-    printf("Enter a number:");
-    scanf("%d", &n);
-odd:
+    int n;
+    printf("Enter the value of n:");
+    scanf("%d",&n);
 
-    if (i % 2 != 0)
+    for (int i = 0; i < n;i++)
     {
-        printf("%d,", i);
+        printf("Hellow World \n");
     }
-    i = i + 1;
-    if (i <= n)
-    {
-        goto odd;
-    } 
+ 
 }
