@@ -1,8 +1,10 @@
 #include <stdio.h>
 
-#define SIZE 5
 
-int main() {
+
+int main() 
+{
+    int SIZE = 5;
     int arr1[SIZE] = {1, 2, 3, 4, 5};
     int arr2[SIZE] = {10, 20, 30, 40, 50};
 

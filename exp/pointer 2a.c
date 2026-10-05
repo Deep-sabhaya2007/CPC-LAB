@@ -1,8 +1,6 @@
-#include <stdio.stdio.h>
-
-#define SIZE 5
-
-int main() {
+#include<stdio.h>
+void main()
+{
     int src[SIZE] = {10, 20, 30, 40, 50};
     int dest[SIZE];
     
