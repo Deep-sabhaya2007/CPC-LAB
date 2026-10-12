@@ -1,13 +1,23 @@
-#include<stdio.h>
-void main()
-{
-    int n;
-    printf("Enter the value of number :");
-    scanf("%d",&n);
+#include <stdio.h>
 
-    for (int i = 1; i <= 10; i++)
-    {
-        printf("n * %d = %d",n,i);
-    }
-    
+float maximum(float a, float b, float c)
+{
+    if (a >= b && a >= c)
+        return a;
+    else if (b >= a && b >= c)
+        return b;
+    else
+        return c;
+}
+
+int main()
+{
+    float a, b, c;
+
+    printf("Enter three floating-point numbers: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    printf("Maximum = %.2f", maximum(a, b, c));
+
+    return 0;
 }

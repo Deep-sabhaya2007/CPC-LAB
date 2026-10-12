@@ -1,14 +1,20 @@
 #include <stdio.h>
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
 int main()
 {
+    int a, b, sum;
 
-    int n;
-    printf("Enter the value of n:");
-    scanf("%d",&n);
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
 
-    for (int i = 0; i < n;i++)
-    {
-        printf("Hellow World \n");
-    }
- 
+    sum = add(a, b);
+
+    printf("Sum = %d", sum);
+
+    return 0;
 }

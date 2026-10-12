@@ -1,17 +1,30 @@
-
 #include <stdio.h>
-void main()
-{
-    int n=100;
 
-    for (int i = 1; i <= n; i++)
-    {
-        if (i%2 == 0)
-        {
-            printf("%d \n",i);
-        }
-        
-    }
-    
-    
+int maximum(int a, int b)
+{
+    if (a > b)
+        return a;
+    else
+        return b;
+}
+
+int minimum(int a, int b)
+{
+    if (a < b)
+        return a;
+    else
+        return b;
+}
+
+int main()
+{
+    int a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    printf("Maximum = %d\n", maximum(a, b));
+    printf("Minimum = %d", minimum(a, b));
+
+    return 0;
 }

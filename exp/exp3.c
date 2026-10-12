@@ -1,17 +1,26 @@
-
 #include <stdio.h>
-void main()
-{
-    int n=100;
 
-    for (int i = 1; i <= n; i++)
-    {
-        if (i%2 != 0)
-        {
-            printf("%d \n",i);
-        }
-        
-    }
-    
-    
+float simpleInterest(float p, float r, float t)
+{
+    return (p * r * t) / 100;
+}
+
+int main()
+{
+    float p, r, t, si;
+
+    printf("Enter principal amount: ");
+    scanf("%f", &p);
+
+    printf("Enter rate of interest: ");
+    scanf("%f", &r);
+
+    printf("Enter time in years: ");
+    scanf("%f", &t);
+
+    si = simpleInterest(p, r, t);
+
+    printf("Simple Interest = %.2f", si);
+
+    return 0;
 }
