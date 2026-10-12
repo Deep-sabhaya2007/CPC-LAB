@@ -1,28 +1,32 @@
-//Using a String pointer remove a space and special character from string.
- 
-
-
+// Find maximum and minimum between two numbers using function.
 #include <stdio.h>
-void main()
+int maximum(int c, int d);
+int minimum(int c, int d);
+int main()
 {
-    
-    char s[100] , *p;
-    printf("Enter the string");
-    gets(s);
+    int a, b;
 
-    p=s;
-    while (*p != 0 )
-    {
-        if (*p>='A' && *p<= 'Z'||*p>='a' && *p<= 'z'||*p>='1' && *p<= '9')
-        {
-            printf("%c",*p);
-        }
-        p++;
-    }
-    
+    printf("Enter first numbers: ");
+    scanf("%d", &a);
+    printf("Enter second numbers: ");
+    scanf("%d", &b);
 
+    printf("Maximum = %d\n", maximum(a, b));
+    printf("Minimum = %d", minimum(a, b));
+}
 
+int maximum(int c, int d)
+{
+    if (c > d)
+        return c;
+    else
+        return d;
+}
 
-
-
+int minimum(int c, int d)
+{
+    if (c < d)
+        return c;
+    else
+        return d;
 }

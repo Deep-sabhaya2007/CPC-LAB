@@ -1,19 +1,21 @@
-// Copy a one string’s value in another string using a string pointer.
+// Count simple interest using function.
 
 #include <stdio.h>
+
+int si(int p, int t, int r);
 void main()
 {
-    char s1[100],*p, s2[100],*q;
-    printf("Enter string 1:");
-    gets(s1);
-    p=s1;
-    q=s2;
-    while (*p!='\0')
-    {
-        *q=*p;
-        p++;
-        q++;
-    }
-    *q='\0';
-printf("Coppied string = %s",s2);    
+    int p, r, t;
+    printf("Enter the principal value = ");
+    scanf("%d", &p);
+    printf("Enter the Rate = ");
+    scanf("%d", &r);
+    printf("Enter the Time = ");
+    scanf("%d", &t);
+    int res = si(p, t, r);
+    printf("simple intrest = %d", res);
+}
+int si(int p, int t, int r)
+{
+    return (p * r * t) / 100;
 }

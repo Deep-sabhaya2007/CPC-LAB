@@ -1,30 +1,16 @@
-// Find weather given string is palindrome or not.
-
+// Add two numbers using function.
 #include <stdio.h>
-void main()
+int add(int c, int d); int main()
 {
-    int len, flag = 0;
-    char s1[100];
-    gets(s1);
-
-    for (int i = 0; s1[i] != '\0'; i++)
-    {
-        len++;
-    }
-    
-    for (int i = 0; i < len / 2; i++)
-    {
-        if (s1[i] == s1[len - 1 - i])
-        {
-            flag == 1;
-        }
-    }
-    if (flag == 0)
-    {
-        printf("Given string is a pelendrom");
-    }
-    else
-    {
-        printf("Not a string");
-    }
+    int a, b;
+    printf("Enter a :");
+    scanf("%d", &a);
+    printf("Enter b :");
+    scanf("%d", &b);
+    int res = add(a, b);
+    printf("%d", res);
+}
+int add(int c, int d)
+{
+    return c + d;
 }
