@@ -1,44 +1,37 @@
-// 3. Demonstrate difference between structure and union.
-
+// Demonstrate difference between structure and union.
 #include <stdio.h>
-
-struct Student
+struct student
 {
-    int id;
-    float marks;
-    char grade;
+    float mark;
+    char name;
 };
 
-union StudentData
+union studentdata
 {
-    int id;
-    float marks;
-    char grade;
+    float mark;
+    char name;
 };
-
-int main()
+// for structure
+void main()
 {
-    struct Student s;
-    union StudentData u;
+    struct student s;
 
-    printf("Structure:\n");
-    s.id = 101;
-    s.marks = 85.5;
-    s.grade = 'A';
+    printf("enter the marks ;");
+    scanf("%f", s.mark);
 
-    printf("ID = %d\n", s.id);
-    printf("Marks = %.2f\n", s.marks);
-    printf("Grade = %c\n", s.grade);
+    getchar();
+    printf("enter the name ;");
+    gets(s.name);
+}
+// for union
+void main()
+{
+    union studentdata a;
 
-    printf("\nUnion:\n");
-    u.id = 101;
-    printf("ID = %d\n", u.id);
+    printf("enter the marks ;");
+    scanf("%f", &a.mark);
 
-    u.marks = 85.5;
-    printf("Marks = %.2f\n", u.marks);
-
-    u.grade = 'A';
-    printf("Grade = %c\n", u.grade);
-
-    return 0;
+    getchar();
+    printf("enter the name ;");
+    gets(a.name);
 }
