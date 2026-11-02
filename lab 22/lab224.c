@@ -1,45 +1,48 @@
-// 2. Add two times hh, mm and ss using structure. 
-
-
+// Add two times hh, mm and ss using structure.
 #include <stdio.h>
-
-struct Time
+struct time
 {
-    int hh;
-    int mm;
-    int ss;
+    int hour, min, sec;
 };
-
 int main()
 {
-    struct Time t1, t2, sum;
+    struct time t1, t2, sum;
 
-    printf("Enter first time:\n");
-    printf("Enter hours, minutes and seconds: ");
-    scanf("%d %d %d", &t1.hh, &t1.mm, &t1.ss);
+    printf("Enter the first time : \n\n");
+    printf(" Enter the hour : ");
+    scanf(" %f", &t1.hour);
 
-    printf("\nEnter second time:\n");
-    printf("Enter hours, minutes and seconds: ");
-    scanf("%d %d %d", &t2.hh, &t2.mm, &t2.ss);
+    printf(" Enter the minute : ");
+    scanf(" %f", &t1.min);
 
-    sum.ss = t1.ss + t2.ss;
-    sum.mm = t1.mm + t2.mm;
-    sum.hh = t1.hh + t2.hh;
+    printf(" Enter the second : ");
+    scanf(" %f", &t1.sec);
 
-    if (sum.ss >= 60)
+    printf("Enter the second time : \n\n");
+    printf(" Enter the hour : ");
+    scanf(" %f", &t2.hour);
+
+    printf(" Enter the minute : ");
+    scanf(" %f", &t2.min);
+
+    printf(" Enter the second : ");
+    scanf(" %f", &t2.sec);
+
+    sum.hour = t1.hour + t2.hour;
+    sum.min = t1.min + t2.min;
+    sum.sec = t2.sec + t2.sec;
+
+    if (sum.sec > 60)
     {
-        sum.mm += sum.ss / 60;
-        sum.ss %= 60;
+        sum.min = sum.min + (sum.sec) / 60;
+        sum.sec = sum.sec % 60;
     }
 
-    if (sum.mm >= 60)
+    if (sum.min > 60)
     {
-        sum.hh += sum.mm / 60;
-        sum.mm %= 60;
+        sum.hour = sum.hour + (sum.min) / 60;
+        sum.min = sum.min % 60;
     }
 
-    printf("\nTotal Time = %02d:%02d:%02d\n",
-           sum.hh, sum.mm, sum.ss);
-
-    return 0;
+    printf("Time == %02d :  %d :  %d ", sum.hour ,sum.min, sum.sec);
 }
