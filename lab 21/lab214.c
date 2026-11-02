@@ -1,28 +1,30 @@
 // Demonstrate difference between structure and union.
 #include <stdio.h>
-struct student
-{
-    float mark;
-    char name;
-};
+// struct student
+// {
+//     float mark;
+//     char name[50];
+// };
 
 union studentdata
 {
     float mark;
-    char name;
+    char name[50];
 };
 // for structure
-void main()
-{
-    struct student s;
+// void main()
+// {
+//     struct student s;
 
-    printf("enter the marks ;");
-    scanf("%f", s.mark);
+//     printf("enter the marks ;");
+//     scanf("%f", s.mark);
 
-    getchar();
-    printf("enter the name ;");
-    gets(s.name);
-}
+//     getchar();
+//     printf("enter the name ;");
+//     gets(s.name);
+//     printf("marks : %f",s.mark);
+//     printf("marks : %s",s.name);
+// }
 // for union
 void main()
 {
@@ -34,4 +36,6 @@ void main()
     getchar();
     printf("enter the name ;");
     gets(a.name);
+     printf("marks : %f",a.mark);
+    printf("marks : %s",a.name);
 }
